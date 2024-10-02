@@ -3,11 +3,17 @@ import dotenv from 'dotenv';
 import authRouter from './routes/authRoutes';
 import { Request, Response } from 'express';
 import getDatabaseConnection from './utils/databaseConnection';
+import cors from 'cors';
 
 dotenv.config();
 
 const startServer = async () => {
     const app = express();
+    let corsOptions = {
+        origin: ['http://localhost:3000'],
+    };
+
+    app.use(cors(corsOptions));
 
     app.use(express.json());
 

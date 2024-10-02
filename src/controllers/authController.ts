@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import User from '../types/User';
+import { User } from '../types/User';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { Collection, MongoServerError } from 'mongodb';
