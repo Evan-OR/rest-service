@@ -1,5 +1,9 @@
-declare module Express {
+import { MSUserData } from './User';
+
+declare global {
+  namespace Express {
     interface Request {
-        myField?: string;
+      user: MSUserData;
     }
+  }
 }

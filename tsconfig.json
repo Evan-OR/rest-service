@@ -1,13 +1,17 @@
 {
-    "compilerOptions": {
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
-        "target": "ES2020",
-        "sourceMap": true,
-        "outDir": "dist",
-        "noUnusedLocals": true,
-        "typeRoots": ["src/types"]
-    },
-    "include": ["src/**/*", "src/types"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "sourceMap": true,
+    "outDir": "dist",
+    "noUnusedLocals": true,
+    "typeRoots": ["src/types"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*", "src/types"],
+  "exclude": ["node_modules"]
 }
