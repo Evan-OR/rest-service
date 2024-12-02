@@ -1,12 +1,23 @@
 import { ObjectId } from 'mongodb';
 
-interface User {
-    _id?: ObjectId;
-    username: string;
-    email: string;
-    password: string;
-    registration_date: number;
-    isSeller: boolean;
-}
+export type User = {
+  _id?: ObjectId;
+  username: string;
+  registration_date: number;
+  isSeller: boolean;
+} & MSUserData;
 
-export default User;
+export type MSUserData = {
+  '@odata.context': string;
+  businessPhones: string[];
+  displayName: string;
+  givenName: string;
+  id: string;
+  jobTitle: string | null;
+  mail: string;
+  mobilePhone: string | null;
+  officeLocation: string | null;
+  preferredLanguage: string;
+  surname: string;
+  userPrincipalName: string;
+};
