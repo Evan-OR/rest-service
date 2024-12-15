@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { Request, Response } from 'express';
 import getDatabaseConnection from './utils/databaseConnection';
 import cors from 'cors';
-import { parseStringPromise } from 'xml2js';
+// import { parseStringPromise } from 'xml2js';
 import userRouter from './routes/userRoutes';
 import verifyMsToken from './middleware/verifyMsToken';
 
@@ -31,20 +31,20 @@ const startServer = async () => {
   app.use('/user', verifyMsToken, userRouter);
 
   app.use('/xml', async (req, res) => {
-    const videoRequest = await fetch('http://48.209.33.228:8080/stat');
-    const data = await videoRequest.text();
+    // const videoRequest = await fetch('http://48.209.33.228:8080/stat');
+    // const data = await videoRequest.text();
 
-    // XML
-    const jsonData = await parseStringPromise(data, 'text/xml');
-    // STREAMS = jsonData.rtmp.server[0].application[0].live[0].stream
-    console.log(
-      'streams',
-      jsonData.rtmp.server[0].application[0].live[0].stream.map((stream) => stream.name[0])
-    );
+    // // XML
+    // const jsonData = await parseStringPromise(data, 'text/xml');
+    // // STREAMS = jsonData.rtmp.server[0].application[0].live[0].stream
+    // console.log(
+    //   'streams',
+    //   jsonData.rtmp.server[0].application[0].live[0].stream.map((stream) => stream.name[0])
+    // );
 
-    res.setHeader('content-type', 'text/xml');
+    // res.setHeader('content-type', 'text/xml');
 
-    res.send(data);
+    res.json([{ title: 'Epic selling things' }, { title: 'Real selling stuff bruv' }]);
   });
 
   app.get('/', async (req: Request, res: Response) => res.status(200).json({ omg: 'working' }));
