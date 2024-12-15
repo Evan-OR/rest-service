@@ -5,6 +5,7 @@ export type User = {
   username: string;
   registration_date: number;
   isSeller: boolean;
+  wallet: number;
 } & MSUserData;
 
 export type MSUserData = {

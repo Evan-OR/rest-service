@@ -3,7 +3,7 @@ import { IncomingHttpHeaders } from 'http';
 import { USER_HEADERS } from './requestConstants';
 import { MSUserData } from '../types/User';
 
-export const createResponse = (statusCode: number, data?: Record<string, string>) => {
+export const createResponse = (statusCode: number, data?: Record<string, any>) => {
   return {
     statusCode: statusCode,
     statusMessage: status(statusCode),
