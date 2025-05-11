@@ -1,6 +1,6 @@
-import { CompletedBid } from '@/types/requests';
 import { Router } from 'express';
 import { Collection } from 'mongodb';
+import { CompletedBid } from '../types/requests';
 
 const bidRouter = Router();
 

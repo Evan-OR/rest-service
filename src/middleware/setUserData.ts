@@ -1,6 +1,6 @@
-import { IRequestWithUserInfo } from '@/types/requests';
-import { User } from '@/types/User';
 import { NextFunction, Response } from 'express';
+import { IRequestWithUserInfo } from '../types/requests';
+import { User } from '../types/User';
 
 const setUserDataOnReq = (req: IRequestWithUserInfo, res: Response, next: NextFunction) => {
   try {

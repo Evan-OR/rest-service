@@ -6,12 +6,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "noUnusedLocals": true,
-    "typeRoots": ["src/types"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "baseUrl": "."
   },
-  "include": ["src/**/*", "src/types"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*", "src/types"]
 }

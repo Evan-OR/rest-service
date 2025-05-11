@@ -1,7 +1,7 @@
-import { User } from '@/types/User';
 import { BlobServiceClient } from '@azure/storage-blob';
 import dotenv from 'dotenv';
 import { Collection } from 'mongodb';
+import { User } from '../types/User';
 
 dotenv.config();
 const AZURE_STORAGE_CONNECTION_STRING = process.env.AZURE_STORAGE_CONNECTION_STRING;

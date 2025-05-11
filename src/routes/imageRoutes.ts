@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { uploadUserProfilePic } from '@/controllers/imageController';
+import { uploadUserProfilePic } from '../controllers/imageController';
 
 const imageRouter = Router();
 

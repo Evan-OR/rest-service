@@ -1,8 +1,8 @@
-import { IRequestWithUserInfo } from '@/types/requests';
-import { MSUserData, User } from '@/types/User';
-import { createResponse } from '@/utils/requests';
 import { Response } from 'express';
 import { Collection } from 'mongodb';
+import { IRequestWithUserInfo } from '../types/requests';
+import { MSUserData, User } from '../types/User';
+import { createResponse } from '../utils/requests';
 
 export const registerUser = async (req: IRequestWithUserInfo, res: Response) => {
   console.log(req.body);
