@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "start": "node dist/index"
   },
   "keywords": [],
   "author": "Evan O'Rourke",
