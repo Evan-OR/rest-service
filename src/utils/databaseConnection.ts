@@ -5,6 +5,7 @@ const getDatabaseConnection = async (connectionString: string) => {
   await client.connect();
   return {
     usersCollection: client.db('live_streaming_db').collection('users'),
+    bidsCollection: client.db('live_streaming_db').collection('completed_bids'),
   };
 };
 
