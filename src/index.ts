@@ -17,11 +17,8 @@ const PORT = process.env.PORT || 3000;
 
 const startServer = async () => {
   const app = express();
-  let corsOptions = {
-    origin: '*',
-  };
 
-  app.use(cors(corsOptions));
+  app.use(cors());
 
   app.use(express.json());
 
