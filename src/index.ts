@@ -15,7 +15,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-const startServer = async () => {
+export const startServer = async () => {
   const app = express();
 
   app.use(cors());
@@ -58,7 +58,12 @@ const startServer = async () => {
 
   app.get('/', async (req: Request, res: Response) => res.status(200).json({ omg: 'working' }));
 
-  app.listen(PORT, () => console.log('Listening on port http://localhost:' + PORT));
+  // if (process.env.NODE_ENV !== 'test') {
+  //   app.listen(PORT, () => console.log('Listening on port http://localhost:' + PORT));
+  // }
+  PORT;
+
+  return app;
 };
 
 startServer();

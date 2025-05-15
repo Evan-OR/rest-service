@@ -6,7 +6,8 @@
     "sourceMap": true,
     "outDir": "dist",
     "noUnusedLocals": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "esModuleInterop": true
   },
   "include": ["./src/**/*", "src/types"]
 }
